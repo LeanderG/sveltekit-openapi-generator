@@ -1,4 +1,4 @@
-import { Configuration, ConfigurationParameters, PetApi } from './OpenApi';
+import { Configuration, ConfigurationParameters, PetApi } from './generated/openapi';
 
 export const getPetApi = (fetchApi: (info: RequestInfo, init?: RequestInit) => Promise<Response>): PetApi => {
 	const configurationParameters: ConfigurationParameters = {
