@@ -2,5 +2,5 @@
 node_modules
 /.svelte-kit
 /package
-/src/lib/generated
 /build
+/src/lib/generated

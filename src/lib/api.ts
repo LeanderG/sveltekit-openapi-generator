@@ -1,9 +1,11 @@
 import { Configuration, ConfigurationParameters, PetApi } from './generated/openapi';
 
-export const getPetApi = (fetchApi: (info: RequestInfo, init?: RequestInit) => Promise<Response>): PetApi => {
+export const getPetApi = (
+	fetchApi: (info: RequestInfo, init?: RequestInit) => Promise<Response>
+): PetApi => {
 	const configurationParameters: ConfigurationParameters = {
 		fetchApi,
-		basePath: "https://petstore3.swagger.io/api/v3"
+		basePath: 'https://petstore3.swagger.io/api/v3'
 	};
 	const configuration = new Configuration(configurationParameters);
 

@@ -1,10 +1,9 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
-  import { getPetApi } from '$lib/api';
+	import { getPetApi } from '$lib/api';
 	export const load: Load = async ({ fetch, page }) => {
-  
-    const petApi = getPetApi(fetch);
-		const petResponse = await petApi.getPetByIdRaw({petId: +page.params.id});
+		const petApi = getPetApi(fetch);
+		const petResponse = await petApi.getPetByIdRaw({ petId: +page.params.id });
 
 		if (petResponse.raw.ok) {
 			const pet = await petResponse.value();
